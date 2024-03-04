@@ -1,0 +1,87 @@
+body {
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #002278;
+}
+
+.font_regular{
+  font-weight: 400;
+}
+
+.font_big{
+  font-size: 46px;
+  margin: 0px;
+}
+
+.section_m > div{
+  max-width: 1440px;
+  margin: auto;
+  padding:18px;
+}
+.section_l > div{
+  max-width: 100%;
+  margin: auto;
+}
+
+.bg_blue_light {
+  background-color: #E8FFF6;
+}
+
+.bg_pink_light {
+  background-color: #FFF8FB;
+}
+
+.shadow_pink {
+  box-shadow: #D7C2D230 0px 4px 15px;
+}
+
+.logo {
+  padding: 7px 0px;
+}
+
+.hero > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 430px;
+}
+
+
+
+.cta-wrap {
+  display: flex;
+  gap: 24px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 32px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 28px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  color: #FF007A;
+  padding: 12px 24px;
+  box-shadow: #00227808 0px 4px 15px;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.teaserboxes{
+    gap: 24px;
+    display: flex;
+}
+
+.teaserboxes > div{
+    padding: 24px;
+    border-radius: 16px;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+
+.teaserboxes > div > img{
+    width: 100%;
+}
