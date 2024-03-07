@@ -85,3 +85,15 @@ body {
 .teaserboxes > div > img{
     width: 100%;
 }
+
+
+@media screen and (max-width: 750px) {
+  .teaserboxes {
+    flex-direction: column;
+  }
+  
+  .teaserboxes > div {
+    width: 100%;
+  }
+
+}
