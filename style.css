@@ -20,6 +20,10 @@ p {
   line-height: normal;
 }
 
+.font_footer{
+  color: #ffffff;
+}
+
 .section_m > div{
   max-width: 1440px;
   margin: auto;
@@ -40,6 +44,10 @@ p {
 
 .bg_pink_light {
   background-color: #ffdfe8;
+}
+
+.bg_footer {
+  background-color: #191e38;
 }
 
 .shadow_pink {
@@ -91,9 +99,34 @@ p {
   position: relative;
 }
 
+.hero-visual > svg:first-child {
+  margin-right: 20px;
+  max-width: 35%;
+}
+
+.hero-visual > svg:last-child {
+  max-width: 60%;
+}
+
 .teaserboxes{
     gap: 24px;
     display: flex;
+}
+
+.hero-visual-mobile {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hero-visual-mobile > svg:first-child {
+  width: 24%;
+  margin-right: 20px;
+}
+
+.hero-visual-mobile > svg:last-child {
+  width: 34%;
 }
 
 .teaserboxes > div{
@@ -110,6 +143,23 @@ p {
     width: 70%;
     display: block;
     margin: auto;
+}
+
+@media screen and (max-width: 1043px) {
+  .hero-visual {
+    display: none;
+  }
+
+  .cta-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1044px) {
+  .hero-visual-mobile {
+    display: none;
+  }
 }
 
 
@@ -130,10 +180,6 @@ p {
   .logo {
       max-width: 80px;
       padding: 10px 0px 0px 0px;
-  }
-
-  .hero > div {
-    height: 280px;
   }
 
   .hero-visual {
