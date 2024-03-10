@@ -81,12 +81,6 @@ p {
   border: solid #ffffff 2px;
 }
 
-.cta:hover {
-  transition: 0.3s;
-  background-color: #ffffff;
-  border: solid #FF007A 2px;
-}
-
 .cta:active {
   transition: 0.3s;
   background-color: #ffdfe8;
@@ -166,4 +160,12 @@ p {
     width: 40%;
   }
 
+}
+
+@media (hover: hover) {
+  .cta:hover {
+    transition: 0.3s;
+    background-color: #ffffff;
+    border: solid #FF007A 2px;
+  }
 }
