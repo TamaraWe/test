@@ -18,7 +18,6 @@ input {
   border-radius: 16px;
   height: 56px;
   border: 4px solid #dbf5f2 ;
-  margin-top:12px;
   padding: 0px 18px;
   color: #002278;
   font-size: 21px;
@@ -43,16 +42,30 @@ input:focus::placeholder {
 }
 
 input::placeholder{
-    color: #C6DFDC;
-    font-size: 21px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    line-height: 31px;
+  color: #C6DFDC;
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 31px;
  }
 
 label {
   line-height: 31px;
   font-size: 21px;
+  font-weight: 700;
+}
+
+button {
+  box-sizing: content-box;
+  background-color: #8cb8b6;
+  border: 4px solid #8cb8b6;
+  border-radius: 12px;
+  height: 54px;
+  width: 100px;
+  margin-left: 20px;
+  color: #ffffff;
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -64,6 +77,10 @@ label {
 
 .font_footer{
   color: #ffffff;
+}
+.font_footer a{
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .section_m > div{
