@@ -1,0 +1,428 @@
+:root {
+  --blue: #002154;
+  --blue2: #002E74;
+  --blue3: #003C96;
+  --blue4: #005EEB;
+  --blue5: #A5E9FF;
+  --blue6: #D2E7FF;
+  --blue7: #EBF4FF;
+  --white: #ffffff;
+  --yellow: #FFE76B;
+  --yellow2: #BA9100;
+
+  --h1: 64px;
+  --h2: 48px;
+  --h3: 24px;
+  --richtext: 20px;
+
+  --gap-s: 16px;
+  --gap-m: 24px;
+  --gap-l: 32px;
+  --gap-xl: 80px;
+}
+
+* {
+margin:0;
+padding:0;
+font-family: "Inter", sans-serif;
+}
+
+body{
+
+}
+
+section > div {
+  max-width: 1324px;
+  margin: auto;
+  padding: 80px 32px 80px 32px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 20px;
+  padding: 8px 0px;
+}
+
+a {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue1);
+}
+
+input {
+  border-radius: 16px;
+  height: 56px;
+  border: 4px solid var(--blue) ;
+  padding: 0px 18px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+  line-height: 31px;
+  font-weight: 550;
+  caret-color: var(--blue1);
+  caret-shape: underscore;
+  transition: .2s;
+  width: 400px;
+}
+
+input:focus-visible {
+    outline: none;
+    border: 4px solid var(--blue);
+    transition: .2s;
+    caret-color: var(--blue1);
+}
+
+input:focus::placeholder {
+  transition: .2s;
+  opacity: 0%;
+}
+
+input::placeholder{
+  opacity: 20%;
+  color: var(--blue1);
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 31px;
+ }
+
+.link-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--blue1);
+}
+
+.button-small {
+  padding: 8px 20px;
+  background-color: var(--blue4);
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--white);
+  display: inline-block;
+}
+
+.button {
+  padding: 16px 48px;
+  background-color: var(--white);
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--blue3);
+  font-size: 20px;
+  display: inline-block;
+  box-shadow: 0px 0px #00000057;
+  transition: 0.2s;
+  position: relative;
+  top: 0px;
+}
+
+.button:hover {
+  box-shadow: 7px 10px #00000057;
+  transition: 0.2s;
+  top: -2px;
+  color: var(--blue4);
+}
+
+.button-big {
+  padding: 21px 21px;
+  background-color: var(--blue2);
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.navigation {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.navigation img {
+    width: 70px;
+    padding-top: 8px;
+}
+
+.menu {
+    display: flex;
+    gap: 48px;
+}
+
+.menu a{
+    padding: 16px 0px;
+    border-bottom: solid 4px rgba(255, 0, 0, .0);
+}
+
+.menu a:hover{
+    color: var(--blue5);
+    border-bottom: solid 4px var(--blue5);
+}
+
+.home {
+background-color: var(--blue4);
+color: var(--white);
+padding-bottom: 48px;
+}
+
+.hero {
+  display: flex;
+}
+
+.hero-text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 1;
+  max-width: 630px;
+  position: relative;
+}
+
+.brand-logos {
+  display: flex;
+  gap: 48px;
+}
+
+.brand-logos img {
+    width: 100px;
+}
+
+.header-img {
+  position: absolute;
+  right: -158%;
+  top: -303px;
+}
+
+.introduction {
+  background-color: var(--blue4);
+  color: var(--white);
+}
+
+.introduction > div{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.bg_visual_left {
+  position: absolute;
+  left: -280px;
+}
+
+.bg_visual_right {
+  position: absolute;
+  right: -550px;
+  top: -100px;
+}
+
+.introduction h2{
+  max-width: 800px;
+}
+
+.feature {
+  display: flex;
+  gap: 40px;
+  max-width: 700px;
+  padding-bottom: 24px;
+}
+
+.feature h3{
+  color: var(--blue5);
+}
+
+.feature img{
+  width: 90px;
+}
+
+.courses {
+background-color: var(--white);
+color: var(--blue2);
+}
+
+.courses p{
+  padding-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
+.cours {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  background-color: var(--blue7);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.community {
+background-color: var(--white);
+color: var(--blue2);
+}
+
+.community > div {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+
+.testimonial-slides {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.testimonal {
+    display: flex;
+    gap: 32px;
+    flex-basis: 50%;
+}
+
+.testimonal span {
+    font-weight: 700;
+}
+
+.testimonial-badge {
+    background-color: var(--yellow);
+    color: var(--yellow2);
+    padding: 6px 16px;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+.testimonal h3 {
+    font-size: 40px;
+}
+
+.testimonial-thumbs {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 50%;
+}
+
+.testimonial-thumbs > img {
+    max-width: 94px;
+    margin-right: -16px;
+    border: solid 7px var(--white);
+    border-radius: 100px;
+}
+
+.pricing {
+background-color: var(--blue6);
+color: var(--blue);
+position: relative;
+}
+
+.pricing > div {
+  padding-bottom: 180px;
+}
+
+.pricing h2{
+  font-size: 40px;
+  color: var(--blue2);
+}
+
+.plans {
+  display: flex;
+  position: relative;
+}
+
+.plans .link-text{
+  text-align: center;
+  display: block;
+  padding-top: 16px;
+  text-decoration: underline;
+}
+
+.basic-plan {
+  background-color: var(--blue3);
+  border-radius: 16px;
+  color: var(--white);
+  padding: 24px;
+  position: relative;
+  top: 70px;
+  padding-right: 730px;
+}
+
+.basic-plan > .button-big{
+  background-color: var(--blue4);
+}
+
+.premium-plan {
+  background-color: var(--blue7);
+  border-radius: 16px;
+  color: var(--blue3);
+  padding: 24px;
+  position: absolute;
+  max-width: 640px;
+  right: 0;
+  top: -6%;
+}
+
+.plans h3 {
+  font-size: 48px;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.features-plans{
+  font-weight: 600;
+}
+
+.features-plans p::before{
+  content: url("assets/icon_check.svg");
+  height: 30px;
+  background-color: var(--blue1);
+}
+
+.features-plans p{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.contact {
+background-color: var(--blue3);
+color: var(--white);
+}
+
+.contact > div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact h2 {
+    padding-bottom: 24px;
+}
