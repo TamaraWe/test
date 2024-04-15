@@ -75,7 +75,7 @@ input {
   caret-color: var(--blue1);
   caret-shape: underscore;
   transition: .2s;
-  width: 400px;
+  max-width: 400px;
 }
 
 input:focus-visible {
@@ -202,6 +202,7 @@ padding-bottom: 48px;
 .brand-logos {
   display: flex;
   gap: 48px;
+  flex-wrap: wrap;
 }
 
 .brand-logos img {
@@ -268,7 +269,7 @@ color: var(--blue2);
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
   grid-gap: 24px;
 }
 
@@ -352,6 +353,7 @@ position: relative;
 .plans {
   display: flex;
   position: relative;
+  align-items: center;
 }
 
 .plans .link-text{
@@ -362,13 +364,10 @@ position: relative;
 }
 
 .basic-plan {
-  background-color: var(--blue3);
-  border-radius: 16px;
-  color: var(--white);
-  padding: 24px;
-  position: relative;
-  top: 70px;
-  padding-right: 730px;
+      background-color: var(--blue3);
+      border-radius: 16px 0px 0px 16px;
+      color: var(--white);
+      padding: 24px;
 }
 
 .basic-plan > .button-big{
@@ -380,10 +379,6 @@ position: relative;
   border-radius: 16px;
   color: var(--blue3);
   padding: 24px;
-  position: absolute;
-  max-width: 640px;
-  right: 0;
-  top: -6%;
 }
 
 .plans h3 {
@@ -425,4 +420,46 @@ color: var(--white);
 
 .contact h2 {
     padding-bottom: 24px;
+}
+
+/*-------------------RESPONISVE------------------*/
+
+@media screen and (max-width: 750px) {
+
+/*delete with extra mobile navi*/
+  .navigation {
+    flex-wrap: wrap;
+}
+  .menu {
+    flex-wrap: wrap;
+}
+/*delete with extra mobile navi*/
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cours img{
+    width: 30%;
+    height: 30%;
+  }
+
+  .testimonial-slides {
+    flex-wrap: wrap;
+}
+
+  .testimonal {
+      flex-wrap: wrap;
+  }
+
+  .plans {
+      flex-wrap: wrap;
+      gap: 24px;
+  }
+
+  .basic-plan {
+    border-radius: 16px;
+  }
+
 }
