@@ -19,6 +19,8 @@
   --gap-m: 24px;
   --gap-l: 32px;
   --gap-xl: 80px;
+
+  --nav-count: 5;
 }
 
 * {
@@ -62,6 +64,7 @@ a {
 }
 
 input {
+  margin-top: 8px;
   border-radius: 16px;
   height: 56px;
   border: 4px solid var(--blue) ;
@@ -151,11 +154,21 @@ input::placeholder{
 }
 
 .nav-container {
-  background-color: var(--blue4);
   color: var(--white);
   position: fixed;
   width: 100%;
   z-index: 2;
+  transition: all 0.5s;
+}
+
+.nav-scrolled {
+  background-color: #005eebcf;
+  box-shadow: #0000002b 0px 0px 16px;
+}
+
+.nav-scrolled .navigation img{
+  width: 50px;
+  padding-right: 13px;
 }
 
 .navigation {
@@ -163,17 +176,19 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 16px;
+    padding: 10px 32px 10px 32px;
 }
 
 .navigation img {
-    width: 70px;
+    width: 64px;
     padding-top: 8px;
+    transition: all 0.5s;
 }
 
 .menu {
     display: flex;
     gap: 48px;
+    transition: all 3s;
 }
 
 .menu a{
@@ -189,7 +204,8 @@ input::placeholder{
 .home {
 background-color: var(--blue4);
 color: var(--white);
-padding-bottom: 48px;
+padding-top: 120px;
+margin-bottom: -160px;
 }
 
 .hero {
@@ -215,7 +231,7 @@ padding-bottom: 48px;
 .header-img {
   width: 45%;
   position: relative;
-  bottom: 80px;
+  bottom: 200px;
 }
 
 .header-img img{
@@ -281,6 +297,7 @@ padding-bottom: 48px;
 
 .feature img{
   width: 90px;
+  height: 100%;
 }
 
 .courses {
@@ -329,6 +346,10 @@ color: var(--blue2);
     display: flex;
     gap: 32px;
     flex-basis: 50%;
+}
+
+.testimonal img {
+  height: 100%;
 }
 
 .testimonal span {
@@ -451,6 +472,22 @@ color: var(--white);
 
 @media screen and (max-width: 750px) {
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    padding: 8px 0px;
+}
+
+p {
+    font-size: 18px;
+}
+
 /*delete with extra mobile navi*/
   .navigation {
     flex-wrap: wrap;
@@ -459,6 +496,10 @@ color: var(--white);
     flex-wrap: wrap;
 }
 /*delete with extra mobile navi*/
+
+.brand-logos img {
+    width: 80px;
+}
 
   .grid {
     display: flex;
@@ -470,12 +511,26 @@ color: var(--white);
     height: 30%;
   }
 
-  .testimonial-slides {
-    flex-wrap: wrap;
+  .testimonal {
+      gap: 5%;
+      flex-basis: 100%;
+  }
+
+  .testimonal img{
+    max-width: 25%;
 }
 
-  .testimonal {
-      flex-wrap: wrap;
+  .testimonal h3 {
+    font-size: 24px;
+}
+
+  .testimonial-thumbs > img {
+    max-width: 60px;
+}
+
+.pricing h2 {
+    font-size: 32px;
+    padding-bottom: 24px;
   }
 
   .plans {
@@ -483,9 +538,26 @@ color: var(--white);
       gap: 24px;
   }
 
+  .plans h3 {
+    font-size: 24px;
+}
+
+.price {
+    font-size: 32px;
+}
+
   .basic-plan {
     border-radius: 16px;
   }
+
+  input {
+    height: 45px;
+    max-width: 86%;
+}
+
+input::placeholder{
+  font-size: 18px;
+ }
 
 }
 
@@ -497,10 +569,81 @@ color: var(--white);
     width: 100%;
   }
  .header-img {
-   width: 95%;
+   width: 90%;
    position: absolute;
    opacity: 27%;
  }
+
+ .introduction {
+   background-image:  none;
+}
+
+.testimonial-slides {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*----------------------MOBILE MENU----------------------*/
+.mobile-menu-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 32px;
+    z-index: 1000;
+}
+
+.mobile-menu-trigger img{
+    width: 42px;
+}
+
+.nav-container {
+  background-color: #005eebcf;
+}
+
+.nav-scrolled .navigation img {
+    width: 64px;
+    padding-right: 0;
+}
+
+.navigation {
+flex-direction: column;
+height: 100vh;
+justify-content: space-around;
+}
+.menu {
+flex-direction: column;
+align-items: center;
+align-content: center;
+gap: 0px;
+height: 60%;
+width: 100%;
+}
+
+.menu a{
+  padding: 0;
+  display: block;
+  height: calc(100% / var(--nav-count));
+  border-bottom: none;
+}
+
+.menu a:hover{
+    color: var(--blue5);
+    border-bottom: none;
+}
+
+.navigation .button{
+margin-bottom: 24px;
+}
+
+.mobile-menu-closed{
+  height: fit-content;
+  align-items: flex-start;
+}
+
+.mobile-menu-closed>.menu,.button{
+  display: none;
+}
+
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1800px) {
@@ -515,6 +658,11 @@ color: var(--white);
   .header-img {
     width: 50%;
   }
+
+  .introduction {
+    background-position:  916px;
+    background-image:  url(assets/bg_visual_right.svg);
+}
 }
 
 @media screen and (min-width: 1801px) and (max-width: 2000px) {
