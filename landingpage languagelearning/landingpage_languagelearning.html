@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Language learning with natives</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="script.js"></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,10 @@
 
 <!--  Header -->
 <section class="nav-container">
-<div class="navigation">
+<a onclick="menutoggle()" class="mobile-menu-trigger">
+  <img src="assets/mobile-menu-trigger.png" />
+</a>
+<div class="navigation mobile-menu-closed">
   <a href="/home"><img src="assets/logo.svg"/></a>
   <div class="menu">
     <a href="/home">Home</a>
