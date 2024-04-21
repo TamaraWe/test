@@ -1,6 +1,7 @@
 
 const headerEl = document.querySelector('.nav-container');
 const menutrigger = document.querySelector('.navigation');
+const body = document.querySelector('body');
 
 window.addEventListener('scroll', function(event) {
  if (window.scrollY > 50) {
@@ -12,4 +13,5 @@ window.addEventListener('scroll', function(event) {
 
 function menutoggle() {
   menutrigger.classList.toggle('mobile-menu-closed');
+  body.classList.toggle('no-scroll');
 }
