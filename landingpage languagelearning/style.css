@@ -166,7 +166,7 @@ input::placeholder{
 }
 
 .nav-scrolled {
-  background-color: #005eebcf;
+  background-color: #005eeb;
   box-shadow: #0000002b 0px 0px 16px;
 }
 
@@ -511,6 +511,10 @@ p {
   display: none;
 }
 
+.brand-text {
+  width: 100%;
+}
+
 .brand-logos img {
     width: 80px;
 }
@@ -608,6 +612,10 @@ input::placeholder{
 }
 
 @media screen and (max-width: 1000px) {
+  .no-scroll{
+    overflow: hidden;
+  }
+
   .hero-space {
     width: 0%;
   }
@@ -647,7 +655,7 @@ input::placeholder{
 }
 
 .nav-container {
-  background-color: #005eebcf;
+  background-color: #005eeb;
 }
 
 .navigation img {
