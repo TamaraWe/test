@@ -166,7 +166,7 @@ input::placeholder{
 }
 
 .nav-scrolled {
-  background-color: #005eeb;
+  background-color: var(--blue3);
   box-shadow: #0000002b 0px 0px 16px;
 }
 
@@ -343,7 +343,8 @@ color: var(--blue2);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
+    height: 270px;
 }
 
 .testimonal {
@@ -376,6 +377,7 @@ color: var(--blue2);
     display: flex;
     align-items: flex-start;
     flex-basis: 50%;
+     cursor: pointer;
 }
 
 .testimonial-thumbs > img {
@@ -539,6 +541,7 @@ p {
 
   .cours img{
     width: 25%;
+    max-width: 25%;
     height: 25%;
   }
 
@@ -547,9 +550,18 @@ p {
       flex-basis: 100%;
   }
 
+  .testimonial-slides {
+    height: 320px !important;
+}
+
   .testimonal img{
     max-width: 25%;
+    height: fit-content;
 }
+
+  .testimonal div{
+    height: 219px;
+  }
 
   .testimonal h3 {
     font-size: 24px;
@@ -655,7 +667,11 @@ input::placeholder{
 }
 
 .nav-container {
-  background-color: #005eeb;
+  background-color: var(--blue4);
+}
+
+.nav-scrolled {
+  background-color: var(--blue3);
 }
 
 .navigation img {
@@ -671,15 +687,14 @@ input::placeholder{
 .navigation {
 flex-direction: column;
 height: 100vh;
-justify-content: space-around;
+justify-content: space-evenly;
 padding: 10px 16px 10px 16px;
 }
 .menu {
 flex-direction: column;
 align-items: center;
-align-content: center;
 gap: 0px;
-height: 60%;
+height: 40%;
 width: 100%;
 }
 
@@ -706,10 +721,20 @@ margin-bottom: 24px;
 
 .mobile-menu-closed>.menu{
   display: none;
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.2s;
 }
 
 .mobile-menu-closed .button{
   display: none;
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.2s;
+}
+
+.testimonial-slides {
+  height: 270px;
 }
 
 }
