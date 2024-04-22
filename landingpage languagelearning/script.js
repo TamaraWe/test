@@ -20,9 +20,22 @@ function menutoggle() {
 // Testimonial Carousel
 let testimonials = document.querySelectorAll('.testimonal');
 let thumbnails = document.querySelectorAll('.testimonial-thumbs img');
+let currentIndex = 0;
+const intervalTime = 5000; // Change slide every 5 seconds
 
 function showTestimonial(index) {
   testimonials.forEach(testimonial => testimonial.style.display = 'none');
   testimonials[index].style.display = 'flex';
+  currentIndex = index;
 }
+
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showTestimonial(currentIndex);
+}
+
+// Automatically change slide every intervalTime milliseconds
+setInterval(nextTestimonial, intervalTime);
+
+// Show the first testimonial by default
 showTestimonial(0);
