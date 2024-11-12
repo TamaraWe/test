@@ -1,9 +1,13 @@
+
 <html>
 
 <head>
 <style>
 #squirrel_svg{
 width: 50%;
+}
+
+#Leaf{
 }
 
 .animateleafs {
@@ -48,16 +52,16 @@ transform-origin: 70% 95%;
 
 .animatehead {
   animation-name: headmovement;
-  animation-duration: 2s;
+  animation-duration: 3s;
 animation-timing-function: ease-in-out;
-transform-origin: 70% 95%;
+transform-origin: 58% 55%;
 }
 
 @keyframes headmovement {
-  0% {transform: rotate(0deg);}
-  30% {transform: rotate(5deg);}
-  70% {transform: rotate(-5deg);}
-  100% {transform: rotate(0deg);}
+  0% {transform: rotate(0deg) transform: translate(0px, 0px);}
+  30% {transform: rotate(-3deg)translate(-10px, 5px);}
+  70% {transform: rotate(2deg) translate(0px, 0px);}
+  100% {transform: rotate(0deg) transform: translate(0px, 0px);}
 }
 
 
@@ -122,7 +126,7 @@ transform-origin: 70% 95%;
 <use id="Leafuse1" href="#Leaf1" x="100" y="100" />
 <use href="#Leaf1" style="scale: 50%;" x="100" y="100" />
 </g>
- 
+
 </g>
 </svg>
 
@@ -134,28 +138,28 @@ function triggerAnimation() {
 
   const leaf = document.getElementById("Leaf");
   leaf.classList.add("animateleafs");
-  
+
   leaf.addEventListener("animationend", () => {
     leaf.classList.remove("animateleafs");
   });
-  
+
   const Leafuse1 = document.getElementById("Leafuse1");
   Leafuse1.classList.add("animateleafs1");
-  
+
   Leafuse1.addEventListener("animationend", () => {
     Leafuse1.classList.remove("animateleafs1");
   });
-  
+
   const tail = document.getElementById("Tail");
   tail.classList.add("animatetail");
-	
+
 	tail.addEventListener("animationend", () => {
     tail.classList.remove("animatetail");
   });
-  
+
   const head = document.getElementById("Head");
   head.classList.add("animatehead");
-	
+
 	head.addEventListener("animationend", () => {
     head.classList.remove("animatehead");
   });
