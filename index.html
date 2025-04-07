@@ -1,20 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>x</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamara Wefers - UX/UI Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Tamara Wefers</div>
+    <nav>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    </main>
-	<script src="index.js"></script>
-  </body>
+  <section id="about">
+    <h1>Hi, I'm Tamara!</h1>
+    <p>I'm a UX/UI Designer based in Switzerland. Designing intuitive and beautiful user interfaces.</p>
+  </section>
+
+  <section id="work">
+    <h2>My Work</h2>
+    <div class="projects">
+      <div class="project">
+        <a href="/project1" target="_self">
+          <img
+            src="images/project1.webp"
+            srcset="images/project1-300.webp 300w, images/project1-600.webp 600w"
+            sizes="(max-width: 600px) 300px, 600px"
+            alt="Project 1 thumbnail">
+          <div class="project1-content">
+            <h3 class="project-content-title">Project Title</h3>
+            <p class="project-content-description">This is a short description of the project. It gives an overview of the work done and its impact.</p>
+            <button class="project-content-button">Contact</button>
+          </div>
+        </a>
+      </div>
+
+      <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <div class="project-content">
+          <h3 class="project-content-title">Project Title</h3>
+          <p class="project-content-description">This is a short description of the project. It gives an overview of the work done and its impact.</p>
+          <button class="project-content-button">Contact</button>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="project-content">
+          <h3 class="project-content-title">Project Title</h3>
+          <p class="project-content-description">This is a short description of the project. It gives an overview of the work done and its impact.</p>
+          <button class="project-content-button">Contact</button>
+        </div>
+      </div>
+      <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <div class="project-content">
+          <h3 class="project-content-title">Project Title</h3>
+          <p class="project-content-description">This is a short description of the project. It gives an overview of the work done and its impact.</p>
+          <button class="project-content-button">Contact</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Connect with me on social media!</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
